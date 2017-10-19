@@ -1,0 +1,20 @@
+﻿@model List<ClassLib.Account>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table-striped">
+    @foreach (var x in Model.OrderBy(x=>x.AccountId))
+    {
+        
+        <tr>
+            <td>@x.AccountCode</td>
+            <td>@x.Name</td>
+
+            <td>@x.IsSummary</td>
+
+        </tr>
+    }
+    
+</table>
